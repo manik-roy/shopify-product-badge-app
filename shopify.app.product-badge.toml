@@ -1,8 +1,8 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 name = "product-badge"
-client_id = "91f35fe981a85c88903517b12c7df2c8"
-application_url = "https://secrets-shipment-directors-symptoms.trycloudflare.com"
+client_id = "f1fb5ae772e26aaa82ef60a062fe8ad0"
+application_url = "https://grades-qualifications-exactly-problems.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products,write_metaobjects"
 
 [auth]
 redirect_urls = [
-  "https://secrets-shipment-directors-symptoms.trycloudflare.com/auth/callback",
-  "https://secrets-shipment-directors-symptoms.trycloudflare.com/auth/shopify/callback",
-  "https://secrets-shipment-directors-symptoms.trycloudflare.com/api/auth/callback"
+  "https://grades-qualifications-exactly-problems.trycloudflare.com/auth/callback",
+  "https://grades-qualifications-exactly-problems.trycloudflare.com/auth/shopify/callback",
+  "https://grades-qualifications-exactly-problems.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

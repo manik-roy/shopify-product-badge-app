@@ -79,3 +79,31 @@ li {
     padding-bottom: 1rem;
   }
 }
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  /* Customize the badge color */
+  color: white;
+  /* Customize the badge text color */
+  padding: 5px 10px;
+  /* Adjust the padding to fit your badge content */
+  border-radius: 5px;
+  /* Add rounded corners to the badge */
+  font-size: 12px;
+  /* Customize the font size */
+}
+
+/* Style for the image (for illustration purposes) */
+.image {
+  width: 300px;
+  /* Adjust the image dimensions as needed */
+  height: auto;
+}

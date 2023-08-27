@@ -1,24 +1,23 @@
-import { useEffect } from "react";
 import { json } from "@remix-run/node";
 import {
   useActionData,
   useLoaderData,
+  useNavigate,
   useNavigation,
   useSubmit,
 } from "@remix-run/react";
 import {
-  Page,
+  Box,
+  Button,
+  Card,
+  HorizontalStack,
   Layout,
+  Link,
+  Page,
   Text,
   VerticalStack,
-  Card,
-  Button,
-  HorizontalStack,
-  Box,
-  Divider,
-  List,
-  Link,
 } from "@shopify/polaris";
+import { useEffect } from "react";
 
 import { authenticate } from "../shopify.server";
 
@@ -75,6 +74,7 @@ export async function action({ request }) {
 
 export default function Index() {
   const nav = useNavigation();
+  const navigate = useNavigate();
   const { shop } = useLoaderData();
   const actionData = useActionData();
   const submit = useSubmit();
@@ -97,9 +97,9 @@ export default function Index() {
 
   return (
     <Page>
-      <ui-title-bar title="Remix app template">
-        <button variant="primary" onClick={generateProduct}>
-          Generate a product
+      <ui-title-bar title="Product Badges">
+        <button variant="primary" onClick={() => navigate("/app/create")}>
+          Add Product Badge
         </button>
       </ui-title-bar>
       <VerticalStack gap="5">
@@ -179,96 +179,6 @@ export default function Index() {
                 )}
               </VerticalStack>
             </Card>
-          </Layout.Section>
-          <Layout.Section secondary>
-            <VerticalStack gap="5">
-              <Card>
-                <VerticalStack gap="2">
-                  <Text as="h2" variant="headingMd">
-                    App template specs
-                  </Text>
-                  <VerticalStack gap="2">
-                    <Divider />
-                    <HorizontalStack align="space-between">
-                      <Text as="span" variant="bodyMd">
-                        Framework
-                      </Text>
-                      <Link url="https://remix.run" target="_blank">
-                        Remix
-                      </Link>
-                    </HorizontalStack>
-                    <Divider />
-                    <HorizontalStack align="space-between">
-                      <Text as="span" variant="bodyMd">
-                        Database
-                      </Text>
-                      <Link url="https://www.prisma.io/" target="_blank">
-                        Prisma
-                      </Link>
-                    </HorizontalStack>
-                    <Divider />
-                    <HorizontalStack align="space-between">
-                      <Text as="span" variant="bodyMd">
-                        Interface
-                      </Text>
-                      <span>
-                        <Link url="https://polaris.shopify.com" target="_blank">
-                          Polaris
-                        </Link>
-                        {", "}
-                        <Link
-                          url="https://shopify.dev/docs/apps/tools/app-bridge"
-                          target="_blank"
-                        >
-                          App Bridge
-                        </Link>
-                      </span>
-                    </HorizontalStack>
-                    <Divider />
-                    <HorizontalStack align="space-between">
-                      <Text as="span" variant="bodyMd">
-                        API
-                      </Text>
-                      <Link
-                        url="https://shopify.dev/docs/api/admin-graphql"
-                        target="_blank"
-                      >
-                        GraphQL API
-                      </Link>
-                    </HorizontalStack>
-                  </VerticalStack>
-                </VerticalStack>
-              </Card>
-              <Card>
-                <VerticalStack gap="2">
-                  <Text as="h2" variant="headingMd">
-                    Next steps
-                  </Text>
-                  <List spacing="extraTight">
-                    <List.Item>
-                      Build an{" "}
-                      <Link
-                        url="https://shopify.dev/docs/apps/getting-started/build-app-example"
-                        target="_blank"
-                      >
-                        {" "}
-                        example app
-                      </Link>{" "}
-                      to get started
-                    </List.Item>
-                    <List.Item>
-                      Explore Shopify’s API with{" "}
-                      <Link
-                        url="https://shopify.dev/docs/apps/tools/graphiql-admin-api"
-                        target="_blank"
-                      >
-                        GraphiQL
-                      </Link>
-                    </List.Item>
-                  </List>
-                </VerticalStack>
-              </Card>
-            </VerticalStack>
           </Layout.Section>
         </Layout>
       </VerticalStack>

@@ -6,6 +6,9 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import indexStyles from "./routes/_index/style.css";
+
+export const links = () => [{ rel: "stylesheet", href: indexStyles }];
 
 export default function App() {
   return (

@@ -1,19 +1,19 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-name = "product-badge"
-client_id = "f1fb5ae772e26aaa82ef60a062fe8ad0"
-application_url = "https://grades-qualifications-exactly-problems.trycloudflare.com"
+name = "Product Badge"
+client_id = "fdbba2166edfb100f0b20236745629e3"
+application_url = "https://charity-glasses-visit-wheel.trycloudflare.com"
 embedded = true
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_products,write_metaobjects"
+scopes = "write_products,write_metaobjects,write_discounts"
 
 [auth]
 redirect_urls = [
-  "https://grades-qualifications-exactly-problems.trycloudflare.com/auth/callback",
-  "https://grades-qualifications-exactly-problems.trycloudflare.com/auth/shopify/callback",
-  "https://grades-qualifications-exactly-problems.trycloudflare.com/api/auth/callback"
+  "https://charity-glasses-visit-wheel.trycloudflare.com/auth/callback",
+  "https://charity-glasses-visit-wheel.trycloudflare.com/auth/shopify/callback",
+  "https://charity-glasses-visit-wheel.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]
